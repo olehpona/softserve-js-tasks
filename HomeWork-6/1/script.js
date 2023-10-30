@@ -1,9 +1,7 @@
-function getListInner(){
-    const el = document.getElementById("list");
-    let arr = []
-    for (let i of el.querySelectorAll("li")){
-        arr.push(i.innerText);
-    }
-    alert(arr);
+const li = document.getElementById("list").querySelectorAll('li');
+
+let list = [];
+for(let i of li) {
+    list.push(i.innerText);
 }
-getListInner();
+alert([list[0], list[4], list[1], list[3], list[2]].join(", "));

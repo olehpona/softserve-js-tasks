@@ -12,6 +12,20 @@ function addPrice(){
             for (let j of document.querySelectorAll(".color")){
                 j.classList.remove("active")
             }
+            for (let j of document.querySelectorAll(".shoe")){
+                if (j.getAttribute("color") === e.target.getAttribute("color")){
+                    j.classList.add("show");
+                } else {
+                    j.classList.remove("show");
+                }
+            }
+            for (let j of document.querySelectorAll(".gradient")){
+                if (j.getAttribute("color") === e.target.getAttribute("color")){
+                    j.classList.add("second");
+                } else {
+                    j.classList.remove("second");
+                }
+            }
             e.target.classList.add("active");
             currentColor = Number(i.dataset.price);
             price.innerText = basePrice + currentColor +currentSize+ currentShip;
