@@ -1,4 +1,4 @@
-const li = document.getElementById("list").querySelectorAll('li');
+const li = document.querySelectorAll('li');
 
 let list = [];
 for(let i of li) {
